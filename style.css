@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: url("images/background.jpg"), rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+    margin: 0;
+    padding: 0px 64px;
+    width: 100%;
+    height: 100%;
+    background-position: right;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+.logo {
+    width: 72px;
+    height: auto;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+}
+
+.logo:hover {
+    filter: drop-shadow(0px 0px 32px #49ff18);
+    -webkit-filter: drop-shadow(0px 0px 32px #49ff18);
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0px;
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 1.35rem;
+}
+
+.navbar-item {
+    display: flex;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar-item:hover {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+
+}
+
+.hero-section {
+    width: 40%;
+    margin-top: 6rem;
+}
+
+.hero-title {
+    width: 90%;
+}
+
+.hero-paragraph {
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+.important {
+    font-weight: 800;
+    color: rgb(255, 224, 142);
+}
+
+.trailer-caroussel {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    max-width: 100%;
+    gap: 32px;
+    overflow: hidden;
+}
+
+.caroussel-item {
+    display: flex;
+    width: 364px;
+    aspect-ratio: 16 / 10;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 225, 142, 0.5);
+    transform: scale(0.9);
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.caroussel-item:hover {
+    transform: scale(1);
+    border: 4px solid rgba(255, 225, 142, 1);
+    cursor: pointer;
+}
+
+.caroussel-item:active {
+    transform: scale(0.95);
+}
+
+.caroussel-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.caroussel-item:hover::before {
+    box-shadow: inset 0px 64px 128px -16px rgba(255, 225, 142, 0.2);
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.caroussel-img {
+    width: 100%;
+    object-fit: cover;
+}
